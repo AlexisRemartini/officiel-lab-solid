@@ -13,7 +13,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class ConferencesServiceTest {
     @Mock
-    private ConferencesRepository repository;
+    private ConferenceRepository repository;
 
     @InjectMocks
     private ConferencesService conferencesService;

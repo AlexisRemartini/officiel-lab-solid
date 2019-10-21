@@ -4,10 +4,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ConferencesService {
-    private ConferencesRepository repository;
+    private ConferenceRepository repository;
 
     // Do not create two constructors.
-    public ConferencesService(ConferencesRepository repository) {
+    public ConferencesService(ConferenceRepository repository) {
         this.repository = repository;
     }
 

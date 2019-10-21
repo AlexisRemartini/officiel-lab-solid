@@ -11,9 +11,11 @@ public class CarPriceCalculator {
     }
 
     private int calculatePolutionTax(Car car) {
-        if (car instanceof Hummer) {
+        if (car.isPollutor()) {
             return POLLUTION_TAX;
         }
-        return 0;
+        else {
+            return 0;
+        }
     }
 }

@@ -9,8 +9,7 @@ package ca.ulaval.glo4002.solid_dip;
 public class Main {
 
     public static void main(String[] args) {
-        ConferencesRepository repository = createAndFillConferencesRepository();
-
+        ConferenceRepository repository = createAndFillConferencesRepository();
         ConferencesService service = new ConferencesService(repository);
 
         for (String description : service.searchConferences("is")) {
@@ -18,7 +17,7 @@ public class Main {
         }
     }
 
-    private static ConferencesRepository createAndFillConferencesRepository() {
+    private static ConferenceRepository createAndFillConferencesRepository() {
         Conference javascript = new Conference();
         javascript.name = "Javascript is nice!";
         javascript.description = "Learn javascript";
@@ -27,7 +26,8 @@ public class Main {
         ruby.name = "Ruby is cool too!";
         ruby.description = "Yay!";
 
-        ConferencesRepository repository = new ConferencesRepository();
+        //ConferenceRepository repository = new ConferenceRepositoryMap();
+        ConferenceRepository repository = new ConferenceRepositoryLinkedList();
         repository.persist(javascript);
         repository.persist(ruby);
 
