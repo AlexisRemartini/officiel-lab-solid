@@ -3,7 +3,7 @@ package ca.ulaval.glo4002.solid_dip;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ConferencesRepository {
+public class ConferencesRepositoryMap implements ConferenceRepository {
 
     public Map<String, Conference> conferences = new HashMap<>();
 
